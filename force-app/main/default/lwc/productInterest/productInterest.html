@@ -1,0 +1,12 @@
+<template>
+    <!-- Display the lead count data in chart -->
+    <template if:true={leadCounts}>
+        <h3 style="font-size: 24px; font-weight: bold; ">Lead Count for {productInterest}:</h3>
+        <canvas class="chart"></canvas>
+    </template>
+
+    <!-- If an error occurs or no data is found, show the error message -->
+    <template if:true={errorMessage}>
+        <p class="error-message">{errorMessage}</p>
+    </template>
+</template>
